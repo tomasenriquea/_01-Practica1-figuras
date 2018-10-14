@@ -42,6 +42,7 @@ public class Circle extends Shape{  // Circulo
 	public void dibujarFigura() {
 		// Aqui se obtendra el color de relleno del circulo
 		getPapplet().fill(getColor().getRed(), getColor().getGreen(), getColor().getBlue());
+		getPapplet().stroke(getColor().getRed(), getColor().getGreen(), getColor().getBlue());
 
 		//Aqui se dara la posicion en la pantalla.
 		getPapplet().ellipse((float)getPoint().getX(), (float)getPoint().getY(), (float)radio * 2, (float)radio * 2);

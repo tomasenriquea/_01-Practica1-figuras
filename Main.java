@@ -1,6 +1,5 @@
 package uF4.practicas._01_10_10_2018._01;
 
-import java.util.Scanner;
 import processing.core.PApplet;
 
 public class Main extends PApplet{
@@ -11,15 +10,13 @@ public class Main extends PApplet{
 		Main main = new Main();  // se llama a la clase principal Main
 		PApplet.runSketch(mainArgs, main);
 		//PApplet.main("uF4.practicas._01_10_10_2018._01.Main"); 
-			
-
 	}
 	
 	
 	@Override
 	public void settings(){
 		// aqui se pondra el tamaño de la pantalla.
-		size(800,800);
+		size(Shape.TAMANYO_PANTALLA,Shape.TAMANYO_PANTALLA);
 		Shape.setPapplet(this);
 	}  
 	
@@ -28,33 +25,45 @@ public class Main extends PApplet{
 	public void setup(){
 		// el color de fondo
 		background(255);
-	
 	}
 	
 	
 	public void draw(){
+	
+		Shape.figurasAleatorias();
+		frameRate(10);	
 		
-		//Shape.circulo();
-		//Shape.rectangulo();
+		/*
+		int opcion = Shape.menu();
 		
-		
-		
-		
-		
-		
-		
-		
+			switch (opcion) {
+			case 0: 
+				exit();
+				break;
+			case 1:
+				Shape.circulo();						
+				break;
+			
+			case 2:
+				Shape.rectangulo();
+				break;
+				
+			case 3:
+				Shape.triangulo();
+				break;
 
+			case 4:
+				Shape.figurasAleatorias();
+				frameRate(10);	
+				break;	
+			} 
+		*/
 	}  
-	
-	
-	
 	
 }
 
 
 /*
-
 2.1. Figuras en processing
 Diseñar una aplicación que dibuje figuras (rectángulos, círculos y triángulos) de tamaño, color y posición aleatoria utilizando Processing.
 
@@ -67,23 +76,4 @@ indicaciones:
 
 []3) La aplicación, que extenderá el PApplet de processing, se encargará de crear las figuras e ir dibujando. En la aplicación no se pueden 
      generar los valores aleatorios correspondientes a las posiciones y los colores de las figuras.
-
-
-
-
-
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
