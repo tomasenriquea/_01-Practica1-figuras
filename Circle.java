@@ -24,18 +24,6 @@ public class Circle extends Shape{  // Circulo
 		this.radio = radio;
 	}
 	
-	//-----------------------------------------------------------------------------
-	//-----------------------------------------------------------------------------
-	
-	
-	
-	
-	
-	
-	
-	//-----------------------------------------------------------------------------
-	//-----------------------------------------------------------------------------
-	
 	
 	// METODOS SOBRESCRITOS
 	@Override
@@ -50,7 +38,6 @@ public class Circle extends Shape{  // Circulo
 	}
 
 
-
 	@Override
 	public void dibujarFigura() {
 		// Aqui se obtendra el color de relleno del circulo
@@ -58,21 +45,6 @@ public class Circle extends Shape{  // Circulo
 
 		//Aqui se dara la posicion en la pantalla.
 		getPapplet().ellipse((float)getPoint().getX(), (float)getPoint().getY(), (float)radio * 2, (float)radio * 2);
-	
-		
-		
-		/*
-		stroke(23, 102, 0);  // Esto es la linea externa
-		fill(204, 102, 0);
-		ellipse(300, 500, 55, 55);
-		*/
-	
-	
-	
-	
 	}
-	
-	
-	
-	
+
 }

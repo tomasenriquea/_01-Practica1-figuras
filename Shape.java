@@ -34,7 +34,6 @@ public abstract class Shape extends PApplet{
 	}
 
 
-
 	//SETTERS
 	public void setColor(Color color) {
 		this.color = color;
@@ -49,16 +48,13 @@ public abstract class Shape extends PApplet{
 	}
 	
 	
-	
 	//METODOS DE CALCULOS
-	public abstract double area();
+	public abstract double area();  // area de la figura
 	
-	public abstract double perimetro();
+	public abstract double perimetro();  // perimetro de la figura
 	
-	public abstract void dibujarFigura();
+	public abstract void dibujarFigura();  // crearala la figura en la pantalla.
 	
-	
-
 	
 	//DETALLES 
 	public void detalleCoordenada() {
@@ -77,11 +73,6 @@ public abstract class Shape extends PApplet{
 
 	
 
-	
-	
-	
-	
-	
 	//----------------------------------------------------------------------------------------------------------
 	//----------------------------------------------------------------------------------------------------------
 	
@@ -111,44 +102,78 @@ public abstract class Shape extends PApplet{
 	//----------------------------------------------------------------------------------------------------------
 	//----------------------------------------------------------------------------------------------------------
 	
-	/*
+	
 	public static void circulo() {
+		Scanner sc = new Scanner(System.in);
 		
-
+		System.out.println("\nColor del circulo.");
+		System.out.print("Rojo: ");
+		float red = sc.nextFloat();
+		
+		System.out.print("Verde: ");
+		float green = sc.nextFloat();
+		
+		System.out.print("Blue: ");
+		float blue = sc.nextFloat();
+		
+		Color color = new Color(red, green, blue);  // Combinación de colores principales para un color.
+		
+		//----------------------------------------------------------------------------------------------
+		System.out.println("\nUbicación de la figura.");
+		System.out.print("Coordenada X: ");
+		float x = sc.nextFloat();
+		
+		System.out.print("Coordenada Y: ");
+		float y = sc.nextFloat();
+		
+		Point point = new Point(x, y);  // Coordenada establecida de una posicion.
+		
+		//----------------------------------------------------------------------------------------------
+		System.out.print("\nRadio del circulo: ");
+		double radio = sc.nextDouble();
+		
+		//----------------------------------------------------------------------------------------------
+		// Se crea el circulo.
+		Circle circulo = new Circle(point, color, radio);
+		circulo.dibujarFigura();
+		
+		System.out.println("\n#######################################################");
+		System.out.println("El circulo a crear tiene los siguientes detalles:\n");
+		
+		System.out.println("Perimetro: " + circulo.perimetro() + // se muestra el calculo del perimetro
+		   		           "\nArea: " + circulo.area());  // se muestra el calculo del area
+		
+		System.out.println("\nCirculo creado!!!");
+		System.out.println("#######################################################");
 	}
 	
 	
 	public static void rectangulo() {
-		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in); 
 		
-		Rectangle rectangulo = new Rectangle();  // Crea un rectangulo.
-		
 		//----------------------------------------------------------------------------------------------
-		System.out.println("\nIngrese la combinación de color para el rectangulo.");
+		System.out.println("\nIngrese color del rectangulo.");
 		System.out.print("Rojo: ");
-		float red1 = sc.nextFloat();
+		float red = sc.nextFloat();
 		
 		System.out.print("Verde: ");
-		float green1 = sc.nextFloat();
+		float green = sc.nextFloat();
 		
 		System.out.print("Blue: ");
-		float blue1 = sc.nextFloat();
+		float blue = sc.nextFloat();
 		
-		Color color1 = new Color(red1, green1, blue1);  // Combinación de colores principales para un color.
-		rectangulo.setColor(color1);  // Se le asigna un color
-		
+		Color color = new Color(red, green, blue);  // Combinación de colores principales para un color.
+	
 		//----------------------------------------------------------------------------------------------
 		System.out.println("\nIngrese la ubicación de la figura.");
 		System.out.print("Coordenada X: ");
-		float x1 = sc.nextFloat();
+		float x = sc.nextFloat();
 		
 		System.out.print("Coordenada Y: ");
-		float y1 = sc.nextFloat();
+		float y = sc.nextFloat();
 		
-		Point point1 = new Point(x1, y1);  // Coordenada establecida de una posicion.
-		rectangulo.setPoint(point1);  // Se le asigna una posicion
-		
+		Point point = new Point(x, y);  // Coordenada establecida de una posicion.
+
 		//----------------------------------------------------------------------------------------------
 		System.out.println("\nIngrese el alto y ancho del rectangulo.");
 		
@@ -156,28 +181,29 @@ public abstract class Shape extends PApplet{
 		double alto = sc.nextDouble();
 	
 		System.out.print("Ancho: ");
-		double Ancho = sc.nextDouble();
+		double ancho = sc.nextDouble();
 		
-		rectangulo.setHW(alto, Ancho);  // Se asigna el valor del alto y ancho.
+		Rectangle rectangulo = new Rectangle(alto, ancho, point, color);
+		rectangulo.dibujarFigura();
 		
 		//----------------------------------------------------------------------------------------------
-		System.out.println("\n\n#######################################################");
-		System.out.println("\nEl rectangulo a crear tiene los siguientes detalles:\n");
+		System.out.println("\n#######################################################");
+		System.out.println("El rectangulo a crear tiene los siguientes detalles:\n");
 		
 		System.out.println("Perimetro: " + rectangulo.perimetro() + // se muestra el calculo del perimetro
 				   		   "\nArea: " + rectangulo.area());  // se muestra el calculo del area
 		
-		System.out.println("\nCombinacion de color");
-		rectangulo.detalleColor();  //Aqui los detalles del color y de la posicion.
-		
-		System.out.println("\nUbicacion del rectangulo");
-		rectangulo.detalleCoordenada(); //Aqui los detalles de la posicion.
-		
-		System.out.println("\nRectangulo creado!!!\n");
-		System.out.println("#######################################################\n\n");
+		System.out.println("\nRectangulo creado!!!");
+		System.out.println("#######################################################");
 	}
 	
-	*/
+	
+	public static void triangulo() {
+		
+		
+		
+		
+	}
 	
 	
 	

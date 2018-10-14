@@ -34,48 +34,16 @@ public class Main extends PApplet{
 	
 	public void draw(){
 		
-		Scanner sc = new Scanner(System.in);
-		
-		System.out.println("\nColor del circulo.");
-		System.out.print("Rojo: ");
-		float red = sc.nextFloat();
-		
-		System.out.print("Verde: ");
-		float green = sc.nextFloat();
-		
-		System.out.print("Blue: ");
-		float blue = sc.nextFloat();
-		
-		Color color = new Color(red, green, blue);  // Combinación de colores principales para un color.
-		
-		//----------------------------------------------------------------------------------------------
-		System.out.println("\nUbicación de la figura.");
-		System.out.print("Coordenada X: ");
-		float x = sc.nextFloat();
-		
-		System.out.print("Coordenada Y: ");
-		float y = sc.nextFloat();
-		
-		Point point = new Point(x, y);  // Coordenada establecida de una posicion.
-		
-		//----------------------------------------------------------------------------------------------
-		System.out.print("\nRadio del circulo: ");
-		double radio = sc.nextDouble();
-		
-		//----------------------------------------------------------------------------------------------
-		// Se crea el circulo.
-		Circle circulo = new Circle(point, color, radio);
-		circulo.dibujarFigura();
+		//Shape.circulo();
+		//Shape.rectangulo();
 		
 		
-		System.out.println("\n#######################################################");
-		System.out.println("El circulo a crear tiene los siguientes detalles:\n");
 		
-		System.out.println("Perimetro: " + circulo.perimetro() + // se muestra el calculo del perimetro
-		   		           "\nArea: " + circulo.area());  // se muestra el calculo del area
 		
-		System.out.println("\nCirculo creado!!!");
-		System.out.println("#######################################################");
+		
+		
+		
+		
 
 	}  
 	
